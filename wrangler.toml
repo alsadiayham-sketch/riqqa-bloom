@@ -5,4 +5,4 @@ compatibility_date = "2024-11-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "riqqa-bloom-db"
-database_id = "{{D1_DATABASE_ID}}"
+database_id = "ea9d066a-1a9f-4630-99e3-4b4bae854c25"
