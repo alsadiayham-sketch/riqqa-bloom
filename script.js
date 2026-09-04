@@ -226,7 +226,7 @@ function getFilteredProducts(filter) {
 
     if (filter !== 'all') {
         return products.filter(function (product) {
-            return product.category === filter || product.brand === filter;
+            return product.category === filter;
         });
     }
 
@@ -334,14 +334,10 @@ function createFilterButton(value) {
 
 function renderFilters() {
     var categories = Array.from(new Set(products.map(function (product) { return product.category; })));
-    var brands = Array.from(new Set(products.map(function (product) { return product.brand; })));
     var catContainer = document.getElementById('categoryFilters');
-    var brandContainer = document.getElementById('brandFilters');
-    if (!catContainer || !brandContainer) return;
+    if (!catContainer) return;
     catContainer.innerHTML = '';
-    brandContainer.innerHTML = '';
     categories.forEach(function (category) { catContainer.appendChild(createFilterButton(category)); });
-    brands.forEach(function (brand) { brandContainer.appendChild(createFilterButton(brand)); });
 }
 
 function renderBrands() {
